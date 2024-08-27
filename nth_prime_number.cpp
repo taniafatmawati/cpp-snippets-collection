@@ -1,42 +1,38 @@
 #include <iostream.h>
 #include <conio.h>
 
-void main() {
-    cout << endl << " ========================= Nth Prime Number ========================= " << endl << endl;
-
+main() {
     int n, i;
-
-    cout << " Enter the value of n = ";
+    cout << "Displaying the n-th Prime Number" << endl;
+    cout << "===============================" << endl;
+    cout << endl;
+    cout << "Enter the value of n = ";
     cin >> n;
-    cout << endl << " The " << n << "-th prime number is ";
 
-    int c = 0;
-    int o = 1;
+    int count = 0;
+    int prime_count = 0;
 
-    while (o <= n) {
-        int x = 0;
-
-        for (i = 1; i <= c; i++) {
-            if (c % i == 0) {
-                x++;
+    while (prime_count <= n) {
+        int divisor_count = 0;
+        for (i = 1; i <= count; i++) {
+            if (count % i == 0) {
+                divisor_count++;
             }
         }
 
-        if (x == 2) {
-            if (o == n) {
-                cout << c << " ";
+        if (divisor_count == 2) {
+            if (prime_count == n) {
+                cout << count << " ";
                 goto end;
             } else {
-                o++;
+                prime_count++;
             }
         }
-
-        c++;
+        count++;
     }
-
     cout << endl;
-end:
+    end:
     cout << endl;
-
+    cout << "Done.";
     getch();
 }
