@@ -18,30 +18,6 @@ Below is a summary of the types of scripts included in this repository:
 - **📄 File Handling:** Basic examples of managing data using file I/O operations.
 - **🔧 Miscellaneous:** Various utility scripts and small problem-solving exercises.
 
-## 💻 How to Use
-
-Each script is self-contained and can be compiled and run independently. To run a script:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/taniafatmawati/cpp-snippets-collection.git
-   ```
-
-2. Navigate to the directory containing the script you're interested in:
-   ```bash
-   cd cpp-snippets-collection/script-name
-   ```
-
-3. Compile the script:
-   ```bash
-   g++ -o output_name script-name.cpp
-   ```
-
-4. Run the compiled program:
-   ```bash
-   ./output_name
-   ```
-
 ## 📬 Contact
 
 If you have any questions or suggestions, feel free to reach out:
