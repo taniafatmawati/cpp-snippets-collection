@@ -5,7 +5,7 @@
 int main()
 {
    int i, j, k, n;
-
+   
    cout << "Enter the number of rows n: "; cin >> n;
    
    // Pattern 1
