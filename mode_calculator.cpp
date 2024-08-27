@@ -4,7 +4,7 @@
 void main ()
 {
    cout << endl << " ========================================================================== " << endl;
-   cout << "                 Mode of n Input Data Numbers                              " << endl;
+   cout << "                 Mode of n Inputted Number Data                              " << endl;
    cout << " ========================================================================== " << endl << endl;
 
    int n;
@@ -18,7 +18,7 @@ void main ()
    for (int i = 0; i < n; i++)
    {
       int k = i + 1;
-      cout << " Enter value for data " << k << " = ";
+      cout << " Enter the value of data item " << k << " = ";
       cin >> data[i];
    }
 
@@ -35,25 +35,25 @@ void main ()
       }
    }
 
-   int max_count = 1;
+   int maxCount = 1;
    for (int l = 0; l < n; l++)
    {
-      if (max_count < count[l])
+      if (maxCount < count[l])
       {
-         max_count = count[l];
+         maxCount = count[l];
          mode = data[l];
       }
    }
 
-   float mode1 = mode;
+   float modeValue = mode;
 
-   cout << endl << " Mode of the " << n << " input data is " << mode1;
+   cout << endl << " The mode of the " << n << " inputted data is " << modeValue;
 
    for (int p = 0; p < n; p++)
    {
-      if (count[p] == max_count)
+      if (count[p] == maxCount)
       {
-         if (data[p] == mode1) continue;
+         if (data[p] == modeValue) continue;
          else
          {
             mode = data[p];
@@ -62,5 +62,21 @@ void main ()
       }
    }
 
-   getch();
+   cout << endl << " The mode appears in data positions: ";
+
+   for (int s = 0; s < n; s++)
+   {
+      if (data[s] == modeValue) cout << (s + 1) << "  ";
+      else if (count[s] == maxCount)
+      {
+         if (data[s] == modeValue) continue;
+         else
+         {
+            modeValue = data[s];
+            cout << (s + 1) << "  ";
+         }
+      }
+   }
+
+   getch ();
 }
