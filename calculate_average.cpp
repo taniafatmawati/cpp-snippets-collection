@@ -1,33 +1,33 @@
 #include <iostream.h>
 #include <conio.h>
 
-void main() {
-    int i, j, n;
-    float sum, average;
-    float x[100];
-    
-    cout << "Number of Data X: "; cin >> n;
-    cout << "Enter Data:" << endl;
-    
-    for (i = 0; i < n; i++) {
-        cout << "Data " << (i + 1) << ": ";
-        cin >> x[i];
-    }
-    
-    j = sizeof(x) / sizeof(float); // number according to array definition = 100
-    cout << "Total Data: " << j << endl;
-    cout << "Data: ";
-    
-    sum = 0;
-    for (i = 0; i < n; i++) {
-        cout << x[i] << " ";
-        sum = sum + x[i];
-    }
-    
-    cout << endl;
-    average = sum / n;
-    cout << "Average = " << average << endl;
-    cout << endl;
-    
-    getch();
+void main ()
+{
+   cout << endl << " ======================================================================= " << endl;
+   cout << "                          Average of n Data                              " << endl;
+   cout << " ======================================================================= " << endl << endl;
+
+   int n;
+   float sum, average;
+
+   cout << " Enter the value of n = ";
+   cin >> n;
+
+   float data[100];
+
+   sum = 0;
+
+   for (int i = 0; i < n; i++)
+   {
+      int j = i + 1;
+      cout << " Enter the value of data item " << j << " = ";
+      cin >> data[i];
+      sum = sum + data[i];
+   }
+
+   average = sum / n;
+
+   cout << endl << " The average of " << n << " data items is " << average << endl;
+
+   getch ();
 }
