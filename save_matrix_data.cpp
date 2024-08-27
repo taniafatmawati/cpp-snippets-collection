@@ -11,7 +11,7 @@ main() {
     
     cout << "Saving Matrix Data" << endl;
     cout << "Matrix Name: ";
-    gets(matrix_name);  // Note: gets() is unsafe; consider using fgets() or getline() in modern code.
+    gets(matrix_name);  
     cout << "Number of Rows: ";
     cin >> rows;
     cout << "Number of Columns: ";
